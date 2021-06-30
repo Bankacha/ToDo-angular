@@ -1,0 +1,6 @@
+<ul *ngIf="todos.length > 0">
+  <li *ngFor="let item of todos; let i = index">
+    {{ item }} <button (click)="todos.splice(i, 1)">done</button>
+  </li>
+</ul>
+<h3 style="text-align: center" *ngIf="!todos.length">No items</h3>
