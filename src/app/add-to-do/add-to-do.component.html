@@ -1,0 +1,13 @@
+
+<div class='inputDiv'>
+    <input type='text' [(ngModel)]='inputValue' placeholder="what to od next?"/>
+</div>
+
+<div class='btnDiv'>
+    <button class='addBtn' (click)='addTodo()'>ADD TODO</button>
+</div>
+
+
+<ul class='list'>
+    <li *ngFor='let l of todos; let i = index'>{{l}} <button (click)='todos.splice(i, 1)' class='doneBtn'>done</button></li>
+</ul>
