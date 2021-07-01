@@ -20,4 +20,8 @@ export class CategoriesService {
   ];
 
   constructor() {}
+
+  getCategories() {
+    return this.categories
+  }
 }

@@ -4,27 +4,38 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class TodoService {
-  private readonly maxTodos = 5;
+  private readonly maxTodos = 10;
 
-  private items: string[] = [];
+  private items: { title: string, category: string }[] = [];
 
-  constructor() {}
+  constructor() { }
 
-  getItems(): string[] {
+  getItems(): { title: string, category: string }[] {
     return this.items;
   }
 
-  add(item: string): void {
+  add(item: { title: string, category: string }): void {
     if (!this.maxItemsReached()) {
       this.items.push(item);
     }
   }
 
-  remove(idx: number): void {
-    this.items.splice(idx, 1);
+  remove(title: string): void {
+    this.items = this.items.filter( item => item.title !== title)
   }
 
   maxItemsReached(): boolean {
     return this.items.length >= this.maxTodos;
   }
+
+  getByCategory(category: string) {
+    return this.items.filter( item => item.category === category)
+  }
 }
+
+
+
+// type myType = {
+  // title: string;
+  // category: string;
+// }

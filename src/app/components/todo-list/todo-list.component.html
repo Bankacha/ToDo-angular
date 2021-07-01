@@ -1,6 +1,34 @@
-<ul *ngIf="todos.length > 0">
-  <li *ngFor="let item of todos; let i = index">
-    {{ item }} <button (click)="todos.splice(i, 1)">done</button>
-  </li>
-</ul>
-<h3 style="text-align: center" *ngIf="!todos.length">No items</h3>
+<!-- <div class="container"> -->
+
+<div class="row p-1">
+
+  <div class="col-4">
+    <h5>Home</h5>
+    <ul class="home">
+      <li *ngFor="let item of getItemsByCategory('Home'); let i = index">
+        {{ item.title }}<button (click)="removeToDo(item.title)">done</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-4">
+    <h5>Work</h5>
+    <ul class="work">
+      <li *ngFor="let item of getItemsByCategory('Work'); let i = index">
+        {{ item.title }} <button (click)="removeToDo(item.title)">done</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-4">
+    <h5>Life</h5>
+    <ul class="life">
+      <li *ngFor="let item of getItemsByCategory('Life'); let i = index">
+        {{ item.title }} <button (click)="removeToDo(item.title)">done</button>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- </div> -->
+
+<h3 style="text-align: center; margin-top: 5%;" *ngIf="!todos.length">No items</h3>

@@ -1,21 +1,36 @@
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5%;
+li {
+  margin-bottom: 2%;
+  border-radius: 10px;
 
-  li {
-    width: 30%;
-    margin-bottom: 1%;
-
-    button {
-      border-radius: 10px;
-      float: right;
-      background-color: rgba(47, 100, 107, 0.226);
-      border: none;
-      height: 26px;
-      font-size: 12px;
-    }
+  button {
+    border-radius   : 10px;
+    float           : right;
+    background-color: rgba(47, 100, 107, 0.226);
+    border          : none;
+    height          : 24px;
+    font-size       : 12px;
   }
+}
+
+.home li {
+  background-color: moccasin;
+  padding: 1% 2%;
+}
+
+.work li {
+  background-color: mediumspringgreen;
+  padding: 1% 2%;
+}
+
+.life li {
+  background-color: mediumpurple;
+  padding: 1% 2%;
+}
+
+.row {
+  margin-top: 2%;
+}
+
+h5 {
+  text-align: center;
 }

@@ -1,6 +1,13 @@
 <div class="inputDiv">
   <input type="text" [(ngModel)]="inputValue" placeholder="what to od next?" />
 </div>
+<div class="categoryDiv">
+  <div>
+    <button [ngClass]="{'active' : todoCategory && todoCategory.id === category.id }" *ngFor="let category of categories"
+      (click)='setCategory(category.id)'>{{category.title}}</button>
+  </div>
+</div>
+
 
 <div class="btnDiv">
   <button class="addBtn" (click)="addTodo()">ADD TODO</button>

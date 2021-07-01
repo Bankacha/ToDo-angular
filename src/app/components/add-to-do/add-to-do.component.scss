@@ -1,31 +1,57 @@
-
 input {
     border-radius: 5px;
-    height: 29px;
+    height       : 29px;
 }
 
 input:focus {
     border: none;
 }
 
-.inputDiv{
-    display: flex;
+.inputDiv {
+    display        : flex;
     justify-content: center;
-    margin-top: 2%;
+    margin-top     : 2%;
 
 }
 
 .addBtn {
-    height: 95px;
-    border-radius: 50%;
+    height          : 95px;
+    border-radius   : 50%;
     background-color: salmon;
-    font-weight: 600;
-    border: none;
+    font-weight     : 600;
+    border          : none;
 }
 
 .btnDiv {
-    display: flex;
+    display        : flex;
     justify-content: center;
-    margin-top: 2%;
+    margin-top     : 2%;
 }
 
+.categoryDiv {
+    display        : flex;
+    justify-content: center;
+    flex-flow      : wrap;
+    margin-top     : 2%;
+
+    div {
+        width          : 30%;
+        display        : flex;
+        justify-content: space-evenly;
+    }
+}
+
+.categoryDiv button {
+    width           : 60px;
+    border-radius   : 5px;
+    height          : 29px;
+    font-size       : 14px;
+    border          : none;
+    background-color: rgba(240, 140, 218, 0.548);
+
+
+}
+
+button.active {
+    background-color: lightsteelblue !important
+}
