@@ -1,20 +1,22 @@
 import { Injectable } from '@angular/core';
+import { myType } from '../models';
 
 @Injectable({
   providedIn: 'root',
 })
+
 export class TodoService {
   private readonly maxTodos = 10;
 
-  private items: { title: string, category: string }[] = [];
+  private items: myType[] = [];
 
   constructor() { }
 
-  getItems(): { title: string, category: string }[] {
+  getItems(): myType[] {
     return this.items;
   }
 
-  add(item: { title: string, category: string }): void {
+  add(item: myType): void {
     if (!this.maxItemsReached()) {
       this.items.push(item);
     }
@@ -35,7 +37,3 @@ export class TodoService {
 
 
 
-// type myType = {
-  // title: string;
-  // category: string;
-// }
